@@ -3,7 +3,6 @@ import Button from "@/components/Button";
 import Team from "@/components/TeamCard";
 import Ads from "@/components/AdsCard";
 import { Teams as teamData } from "@/constants/team";
-import { Ads as adsData } from "@/constants/ads";
 
 const Sports = () => {
   return (
@@ -21,7 +20,7 @@ const Sports = () => {
           {teamData?.map((team) => (
             <Team data={team} key={team?.id} />
           ))}
-          <Ads data={adsData} />
+          <Ads />
         </div>
 
         {/* button */}
