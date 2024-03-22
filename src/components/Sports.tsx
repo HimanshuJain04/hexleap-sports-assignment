@@ -12,9 +12,7 @@ const Sports = () => {
         </div>
 
         {/* cards */}
-        <div className="pt-6 flex justify-start items-start">
-          
-        </div>
+        <div className="pt-6 flex justify-start items-start"></div>
 
         {/* button */}
         <div>
