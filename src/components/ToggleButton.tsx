@@ -1,11 +1,20 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
 const ToggleButton: React.FC = () => {
-  const [darkMode, setDarkMode] = useState<boolean>(
-    () => localStorage.getItem("theme") === "dark"
-  );
+  const [darkMode, setDarkMode] = useState<boolean>(false);
+
+  useEffect(() => {
+    // Check if localStorage is available (in the browser)
+    const localStorageTheme = localStorage.getItem("theme");
+    if (localStorageTheme) {
+      setDarkMode(localStorageTheme === "dark");
+    } else {
+      // Set the default theme if localStorage is not available
+      setDarkMode(false); // Set default to light theme
+    }
+  }, []);
 
   useEffect(() => {
     if (darkMode) {
