@@ -7,7 +7,7 @@ import { Ads as adsData } from "@/constants/ads";
 
 const Sports = () => {
   return (
-    <div>
+    <div className="w-full">
       <div>
         {/* heading */}
         <div>
@@ -17,7 +17,7 @@ const Sports = () => {
         </div>
 
         {/* cards */}
-        <div className="pt-6 flex gap-5 justify-start items-start">
+        <div className="pt-7 flex w-full justify-between items-start">
           {teamData?.map((team) => (
             <Team data={team} key={team?.id} />
           ))}

@@ -28,7 +28,10 @@ const CollectionCard = (props: any) => {
         />
       </div>
 
-      <div className="w-full my-5 border-t-2 border-dashed border-card-dots-dark"></div>
+      <div className="w-full my-5 border-t-2 px-4 border-dashed border-card-dots-dark relative">
+        <div className="w-[20px] h-[20px] rounded-full absolute top-[-10px] left-[-25px] bg-bottom-linear-dark"></div>
+        <div className="w-[20px] h-[20px] rounded-full absolute top-[-10px] right-[-25px] bg-bottom-linear-dark"></div>
+      </div>
 
       {/* description */}
       <div className="w-full gap-3 flex justify-center items-center flex-col">

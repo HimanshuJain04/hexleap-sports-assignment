@@ -14,7 +14,7 @@ const AdsCard = (props: any) => {
   return (
     <div className="p-2 bg-bg-card-dark flex flex-col gap-5 w-[237px] h-[511px] overflow-hidden">
       {/* team image */}
-      <div className="overflow-hidden bg-black w-[217px] h-[218px]">
+      <div className="overflow-hidden bg-black w-full h-[218px] relative">
         <Image
           src={data?.image}
           alt="ads-image"
@@ -22,6 +22,10 @@ const AdsCard = (props: any) => {
           height={218}
           className="object-cover h-full w-full"
         />
+
+        <span className="bg-black absolute z-10 top-0 right-0  text-white px-[15px] py-[3px] font-bold text-xs">
+          Ad
+        </span>
       </div>
 
       {/* details */}
