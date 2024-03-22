@@ -1,22 +1,23 @@
 import React from "react";
 import Image from "next/image";
 
-interface collection {
-  id: number;
-  image: string;
-  name: string;
-  collection: string;
-  destination: string;
-  time: string;
-  weekDay: string;
-  month: string;
-  date: number;
+interface CollectionCardProps {
+  data: {
+    id: number;
+    image: string;
+    name: string;
+    collection: string;
+    destination: string;
+    time: string;
+    weekDay: string;
+    month: string;
+    date: number;
+  };
 }
 
-const CollectionCard = (props: any) => {
-  const data: collection = props.data;
+const CollectionCard: React.FC<CollectionCardProps> = ({ data }) => {
   return (
-    <div className="px-4 pt-4 pb-2 bg-white shadow-lg shadow-black/[0.10] dark:bg-bg-card-dark w-[257px] h-[625] overflow-hidden">
+    <div className="px-4 shrink-0 pt-4 pb-2 bg-white shadow-xl shadow-black/[0.10] dark:bg-bg-card-dark w-[257px] h-[625] overflow-hidden">
       {/* image */}
       <div className="overflow-hidden bg-white w-[225] h-[400px]">
         <Image

@@ -1,7 +1,13 @@
+interface Team {
+    image: string;
+    name: string;
+    totalEvents: number;
+    sport: string;
+    id: number;
+}
 
-
-// Assuming that this data is coming from backend
-export const Teams = [
+// Assuming that, this data is coming from backend
+export const Teams: Team[] = [
     {
         image: "/players-images/player1.jpeg",
         name: "Sacramento River Cats",
@@ -31,6 +37,5 @@ export const Teams = [
         totalEvents: 28,
         sport: "baseball",
         id: 4,
-
     },
 ];

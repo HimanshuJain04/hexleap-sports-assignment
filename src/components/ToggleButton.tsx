@@ -1,13 +1,13 @@
-"use client";
-
+"use client"
 import React, { useEffect, useState } from "react";
 import { FaSun, FaMoon } from "react-icons/fa";
 
-const ToggleButton = () => {
-  const [darkMode, setDarkMode] = useState(true);
+const ToggleButton: React.FC = () => {
+  const [darkMode, setDarkMode] = useState<boolean>(
+    () => localStorage.getItem("theme") === "dark"
+  );
 
   useEffect(() => {
-    // Set class on the root element based on darkMode state
     if (darkMode) {
       document.documentElement.classList.add("dark");
     } else {
@@ -18,7 +18,7 @@ const ToggleButton = () => {
   }, [darkMode]);
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex border-2 border-bg-button rounded-full items-center justify-center">
       <button
         onClick={() => setDarkMode(!darkMode)}
         className={`relative w-16 h-8 flex items-center rounded-full transition-transform duration-300 ${

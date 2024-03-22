@@ -1,19 +1,19 @@
 import React from "react";
 import Image from "next/image";
 
-interface team {
-  id: number;
-  image: string;
-  sport: string;
-  name: string;
-  totalEvents: number;
+interface TeamCardProps {
+  data: {
+    id: number;
+    image: string;
+    sport: string;
+    name: string;
+    totalEvents: number;
+  };
 }
 
-const TeamCard = (props: any) => {
-  const data: team = props.data;
-
+const TeamCard: React.FC<TeamCardProps> = ({ data }) => {
   return (
-    <div className="p-2 shadow-xl shadow-black/[0.10] dark:bg-bg-card-dark  bg-bg-card-light  w-[237px] h-[511px] overflow-hidden">
+    <div className="p-2 shadow-xl shrink-0 shadow-black/[0.10] dark:bg-bg-card-dark  bg-bg-card-light  w-[237px] h-[511px] overflow-hidden">
       {/* team image */}
       <div className="overflow-hidden bg-black w-[217px] h-[385px]">
         <Image

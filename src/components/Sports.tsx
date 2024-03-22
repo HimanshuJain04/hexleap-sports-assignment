@@ -17,11 +17,10 @@ const Sports = () => {
         </div>
 
         {/* cards */}
-        <div className="pt-7 flex w-full justify-between items-start">
+        <div className="mt-7 flex w-full flex-row shrink-0 gap-2 overflow-auto justify-between items-start">
           {teamData?.map((team) => (
             <Team data={team} key={team?.id} />
           ))}
-
           <Ads data={adsData} />
         </div>
 
