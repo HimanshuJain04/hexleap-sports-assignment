@@ -12,9 +12,9 @@ const AdsCard = (props: any) => {
   const data: ads = props.data;
 
   return (
-    <div className="p-2 bg-bg-card-dark flex flex-col gap-5 w-[237px] h-[511px] overflow-hidden">
+    <div className="p-2 dark:bg-bg-card-dark shadow-xl shadow-black/[0.10] bg-bg-card-light flex flex-col gap-5 w-[237px] h-[511px] overflow-hidden">
       {/* team image */}
-      <div className="overflow-hidden bg-black w-full h-[218px] relative">
+      <div className="overflow-hidden dark:bg-black bg-white w-full h-[218px] relative">
         <Image
           src={data?.image}
           alt="ads-image"
@@ -23,7 +23,7 @@ const AdsCard = (props: any) => {
           className="object-cover h-full w-full"
         />
 
-        <span className="bg-black absolute z-10 top-0 right-0  text-white px-[15px] py-[3px] font-bold text-xs">
+        <span className="bg-black  absolute z-10 top-0 right-0  text-white px-[15px] py-[3px] font-bold text-xs">
           Ad
         </span>
       </div>
@@ -31,10 +31,12 @@ const AdsCard = (props: any) => {
       {/* details */}
       <div className="p-2 flex flex-col items-center  gap-2">
         {/* title of ads */}
-        <p className="font-semibold text-white text-xl">{data.title}</p>
+        <p className="font-semibold text-ads-title dark:text-white text-xl">
+          {data.title}
+        </p>
 
         {/* description */}
-        <p className="text-text-card-dark px-2 text-sm font-normal">
+        <p className="dark:text-card-dark text-card-light-desc px-2 text-[13px] font-normal">
           {data.description}
         </p>
       </div>

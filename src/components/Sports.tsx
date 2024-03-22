@@ -11,7 +11,7 @@ const Sports = () => {
       <div>
         {/* heading */}
         <div>
-          <span className="text-2xl pb-2 border-b-2 border-[#738FFF] text-white font-bold">
+          <span className="text-2xl pb-2 border-b-2 border-[#738FFF] text-black dark:text-white font-bold">
             Sports
           </span>
         </div>

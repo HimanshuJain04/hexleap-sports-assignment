@@ -15,6 +15,8 @@ const config: Config = {
       },
       colors: {
         // **************** DARK THEME ******************
+        'dark': "#222222",
+        'medium': "#293245",
         'primary-dark': '#292B32',
         'top-linear-dark': '#18282A',
         'bottom-linear-dark': '#221A2C',
@@ -31,8 +33,9 @@ const config: Config = {
         'ads-bg-light': '#FFFFFF',
         'bg-card-light': '#FFFFFF',
         'bg-card-desc-light': '#F7F7F8',
-        'text-card-light': '#525965',
+        'card-light-desc': '#525965',
         'card-dots-light': '#A9ACB2',
+        'ads-title': "#222D3A",
 
         'color-white': '#ffffff',
         'color-black': '#000000',
@@ -42,5 +45,6 @@ const config: Config = {
     },
   },
   plugins: [],
+  darkMode: "class"
 };
 export default config;
