@@ -1,10 +1,12 @@
-import Sports from "@/components/Sports";
+import SportSection from "@/components/Sports";
+import CollectionSection from "@/components/Collection";
 
 const page = () => {
   return (
     <div className="bg-primary-dark h-full w-full flex justify-center items-start">
-      <div className="w-10/12 min-h-screen pt-16">
-        <Sports />
+      <div className="w-10/12 gap-9 flex justify-center flex-col items-start min-h-screen pb-20 pt-16">
+        <SportSection />
+        <CollectionSection />
       </div>
     </div>
   );

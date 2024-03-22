@@ -1,4 +1,9 @@
 import React from "react";
+import Button from "@/components/Button";
+import Team from "@/components/TeamCard";
+import Ads from "@/components/AdsCard";
+import { Teams as teamData } from "@/constants/team";
+import { Ads as adsData } from "@/constants/ads";
 
 const Sports = () => {
   return (
@@ -12,11 +17,17 @@ const Sports = () => {
         </div>
 
         {/* cards */}
-        <div className="pt-6 flex justify-start items-start"></div>
+        <div className="pt-6 flex gap-5 justify-start items-start">
+          {teamData?.map((team) => (
+            <Team data={team} key={team?.id} />
+          ))}
+
+          <Ads data={adsData} />
+        </div>
 
         {/* button */}
-        <div>
-          <button></button>
+        <div className="flex justify-center mt-[50px] items-center w-full">
+          <Button />
         </div>
       </div>
     </div>
