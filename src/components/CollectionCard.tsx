@@ -16,7 +16,7 @@ interface collection {
 const CollectionCard = (props: any) => {
   const data: collection = props.data;
   return (
-    <div className="px-4 pt-4 pb-2 bg-bg-card-dark  w-[257px] h-[625] overflow-hidden">
+    <div className="px-4 pt-4 pb-2 bg-bg-card-dark w-[257px] h-[625] overflow-hidden">
       {/* image */}
       <div className="overflow-hidden bg-black w-[225] h-[400px]">
         <Image
@@ -28,7 +28,7 @@ const CollectionCard = (props: any) => {
         />
       </div>
 
-      <div className="w-full pt-3 border-t-2 border-dashed border-white"></div>
+      <div className="w-full my-5 border-t-2 border-dashed border-card-dots-dark"></div>
 
       {/* description */}
       <div className="w-full gap-3 flex justify-center items-center flex-col">
